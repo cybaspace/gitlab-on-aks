@@ -1,6 +1,7 @@
 # Installing GitLab 
-## Using Terraform with helm provider
-## Target: Azure Kubernetes Cluster
+Using Terraform with helm provider
+
+Target: Azure Kubernetes Cluster
 
 # Prerequists
 Assuming the AKS Cluster is already installed - s. [Microsoft Documentation](https://docs.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli)
@@ -17,6 +18,15 @@ az aks get-credentials -g $RESOURCE_GROUP -n $CLUSTER_NAME
 
 We are using Azure Storage to persist Terraform statefiles - s. [Microsoft Documentation](https://docs.microsoft.com/de-de/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli)
 
+# Install GitLab
+```
+# Login to Azure
+az login
+# On first time or after provider changes in terraform script use
+terraform init
+# Run the installation with terraform
+terraform apply
+```
 
 # After Installation
 To read password for root user from k8s (jq must be installed!)
