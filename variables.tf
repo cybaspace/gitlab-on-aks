@@ -1,19 +1,3 @@
-variable "tfstate_resource_group" {
-    type = string
-    description = "Resource group for tfstate persistence"
-}
-variable "tfstate_storage_account" {
-    type = string
-    description = "Name of storage account for tfstate persistence"
-}
-variable "tfstate_container" {
-    type = string
-    description = "Name of container in storage account for tfstate persistence"
-}
-variable "tfstate_key" {
-    type = string
-    description = "Key to access storage account for tfstate persistence"
-}
 variable "name" {
     type = string
     description = "Name of the deployment on K8s"
